@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オンラインショップ - 大欅の里</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../">
+                    <h1>大欅の里</h1>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../about/">大欅について</a></li>
+                    <li><a href="../experiences/">体験サービス</a></li>
+                    <li><a href="../reservation/">予約</a></li>
+                    <li><a href="../subscription/">季節の便り（サブスク）</a></li>
+                    <li><a href="../shop/">オンラインショップ</a></li>
+                    <li><a href="../around/">周辺情報</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>オンラインショップ</h1>
+                <p>大欅の里の厳選商品をお届けします</p>
+            </div>
+        </section>
+        
+        <!-- 商品カテゴリーナビゲーション -->
+        <section class="shop-navigation">
+            <div class="container">
+                <div class="shop-categories">
+                    <button class="category-btn active" data-category="all">すべて</button>
+                    <button class="category-btn" data-category="tea">紅茶・ハーブティー</button>
+                    <button class="category-btn" data-category="sweets">焼き菓子・スイーツ</button>
+                    <button class="category-btn" data-category="seasonal">季節限定品</button>
+                    <button class="category-btn" data-category="goods">食器・雑貨</button>
+                    <button class="category-btn" data-category="gift">ギフトセット</button>
+                </div>
+                
+                <div class="shop-filter">
+                    <div class="sort-options">
+                        <label for="sort-select">並び替え:</label>
+                        <select id="sort-select">
+                            <option value="recommended">おすすめ順</option>
+                            <option value="new">新着順</option>
+                            <option value="price-asc">価格（安い順）</option>
+                            <option value="price-desc">価格（高い順）</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 商品リスト -->
+        <section class="shop-products">
+            <div class="container">
+                <div class="products-grid">
+                    <!-- 商品アイテム - 紅茶 -->
+                    <div class="product-item" data-category="tea">
+                        <div class="product-image">
+                            <img src="../assets/images/placeholder.jpg" alt="里山のブレンドティー">
+                            <div class="product-badge">人気</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">里山のブレンドティー</h3>
+                            <p class="product-description">大欅の里周辺で採れるハーブをブレンドした、オリジナルティー。</p>
+                            <div class="product-meta">
+                                <span class="product-price">1,600円（税込）</span>
+                                <button class="add-to-cart-btn">カートに追加</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 商品アイテム - 紅茶 -->
+                    <div class="product-item" data-category="tea">
+                        <div class="product-image">
+                            <img src="../assets/images/placeholder.jpg" alt="森の香りの紅茶">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">森の香りの紅茶</h3>
+                            <p class="product-description">森の香りがする、リラックス効果の高い紅茶。ティータイムにぴったり。</p>
+                            <div class="product-meta">
+                                <span class="product-price">1,400円（税込）</span>
+                                <button class="add-to-cart-btn">カートに追加</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 商品アイテム - スイーツ -->
+                    <div class="product-item" data-category="sweets">
+                        <div class="product-image">
+                            <img src="../assets/images/placeholder.jpg" alt="大欅クッキーアソート">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">大欅クッキーアソート</h3>
+                            <p class="product-description">地元産の小麦粉を使用した、季節の素材を活かしたクッキーの詰め合わせ。</p>
+                            <div class="product-meta">
+                                <span class="product-price">1,800円（税込）</span>
+                                <button class="add-to-cart-btn">カートに追加</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 商品アイテム - スイーツ -->
+                    <div class="product-item" data-category="sweets">
+                        <div class="product-image">
+                            <img src="../assets/images/placeholder.jpg" alt="里山のスコーンセット">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">里山のスコーンセット</h3>
+                            <p class="product-description">季節のフルーツやナッツを使った、しっとり食感のスコーン詰め合わせ。</p>
+                            <div class="product-meta">
+                                <span class="product-price">2,200円（税込）</span>
+                                <button class="add-to-cart-btn">カートに追加</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 商品アイテム - 季節限定 -->
+                    <div class="product-item" data-category="seasonal">
+                        <div class="product-image">
+                            <img src="../assets/images/placeholder.jpg" alt="春限定 さくらティー">
+                            <div class="product-badge limited">限定品</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">春限定 さくらティー</h3>
+                            <p class="product-description">春の訪れを感じる、桜の香りがするリーフティー。期間限定商品。</p>
+                            <div class="product-meta">
+                                <span class="product-price">1,800円（税込）</span>
+                                <button class="add-to-cart-btn">カートに追加</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 商品アイテム - 季節限定 -->
+                    <div class="product-item" data-category="seasonal">
+                        <div class="product-image">
+                            <img src="../assets/images/placeholder.jpg" alt="秋限定 きのこビスコッティ">
+                            <div class="product-badge limited">限定品</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">秋限定 きのこビスコッティ</h3>
+                            <p class="product-description">里山のきのこをスパイスとともに焼き上げた、サクサク食感のビスコッティ。</p>
+                            <div class="product-meta">
+                                <span class="product-price">1,600円（税込）</span>
+                                <button class="add-to-cart-btn">カートに追加</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 商品アイテム - 食器・雑貨 -->
+                    <div class="product-item" data-category="goods">
+                        <div class="product-image">
+                            <img src="../assets/images/placeholder.jpg" alt="大欅の葉をモチーフにした陶器カップ">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">大欅の葉をモチーフにした陶器カップ</h3>
+                            <p class="product-description">地元の陶芸家が手作りした、大欅の葉をかたどったカップ。</p>
+                            <div class="product-meta">
+                                <span class="product-price">3,300円（税込）</span>
+                                <button class="add-to-cart-btn">カートに追加</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 商品アイテム - 食器・雑貨 -->
+                    <div class="product-item" data-category="goods">
+                        <div class="product-image">
+                            <img src="../assets/images/placeholder.jpg" alt="ティーポット">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">里山の土で作られたティーポット</h3>
+                            <p class="product-description">里山の土を使って焼き上げた、保温性の高いティーポット。</p>
+                            <div class="product-meta">
+                                <span class="product-price">4,800円（税込）</span>
+                                <button class="add-to-cart-btn">カートに追加</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 商品アイテム - ギフトセット -->
+                    <div class="product-item" data-category="gift">
+                        <div class="product-image">
+                            <img src="../assets/images/placeholder.jpg" alt="大欅の里ギフトボックス">
+                            <div class="product-badge gift">ギフト</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">大欅の里ギフトボックス</h3>
+                            <p class="product-description">紅茶、クッキー、蜂蜜のセット。大切な方への贈り物に。</p>
+                            <div class="product-meta">
+                                <span class="product-price">4,400円（税込）</span>
+                                <button class="add-to-cart-btn">カートに追加</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 商品アイテム - ギフトセット -->
+                    <div class="product-item" data-category="gift">
+                        <div class="product-image">
+                            <img src="../assets/images/placeholder.jpg" alt="ティータイムギフト">
+                            <div class="product-badge gift">ギフト</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">ティータイムギフト</h3>
+                            <p class="product-description">紅茶とカップ、スコーンのセット。贈り物に最適。</p>
+                            <div class="product-meta">
+                                <span class="product-price">5,500円（税込）</span>
+                                <button class="add-to-cart-btn">カートに追加</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ショッピングカート -->
+        <div id="shopping-cart" class="shopping-cart">
+            <div class="cart-header">
+                <h3>ショッピングカート</h3>
+                <button id="close-cart" class="close-cart-btn">&times;</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- カート内アイテムはJavaScriptで動的に追加されます -->
+                <p class="empty-cart-message">カートに商品がありません</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>合計:</span>
+                    <span id="cart-total-amount">0円</span>
+                </div>
+                <button class="checkout-btn">注文手続きへ</button>
+            </div>
+        </div>
+        <div id="cart-overlay" class="cart-overlay"></div>
+        
+        <!-- 配送・返品ポリシー -->
+        <section class="shop-policy">
+            <div class="container">
+                <div class="policy-columns">
+                    <div class="policy-column">
+                        <h3>配送について</h3>
+                        <ul>
+                            <li>送料：全国一律770円（税込）</li>
+                            <li>5,500円以上のご購入で送料無料</li>
+                            <li>発送はご注文確認後、2〜3営業日以内</li>
+                            <li>クール便対応商品は別途330円</li>
+                        </ul>
+                    </div>
+                    <div class="policy-column">
+                        <h3>支払い方法</h3>
+                        <ul>
+                            <li>クレジットカード（VISA・Mastercard・JCB・AMEX）</li>
+                            <li>代金引換（手数料330円）</li>
+                            <li>銀行振込（前払い）</li>
+                        </ul>
+                    </div>
+                    <div class="policy-column">
+                        <h3>返品・交換</h3>
+                        <ul>
+                            <li>商品到着後7日以内に連絡</li>
+                            <li>未開封・未使用の商品のみ</li>
+                            <li>商品の不良・破損の場合は送料当方負担</li>
+                            <li>食品・飲料は返品不可</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>大欅の里</h3>
+                    <p>〒XXX-XXXX<br>XX県XX市XX町XX番地</p>
+                    <p>TEL: 000-000-0000</p>
+                    <p>営業時間: 9:00〜17:00</p>
+                    <p>定休日: 月曜日（祝日の場合は翌日）</p>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="../about/">大欅について</a></li>
+                        <li><a href="../experiences/">体験サービス</a></li>
+                        <li><a href="../reservation/">予約</a></li>
+                        <li><a href="../subscription/">季節の便り（サブスク）</a></li>
+                        <li><a href="../shop/">オンラインショップ</a></li>
+                        <li><a href="../around/">周辺情報</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 大欅の里 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // カテゴリフィルター機能
+        document.querySelectorAll('.category-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                // アクティブクラスの切り替え
+                document.querySelectorAll('.category-btn').forEach(function(b) {
+                    b.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // 選択されたカテゴリを取得
+                const selectedCategory = this.getAttribute('data-category');
+                
+                // 商品のフィルタリング
+                document.querySelectorAll('.product-item').forEach(function(item) {
+                    if (selectedCategory === 'all' || item.getAttribute('data-category') === selectedCategory) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // カートの開閉機能
+        const cartItems = [];
+        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+        const shoppingCart = document.getElementById('shopping-cart');
+        const cartOverlay = document.getElementById('cart-overlay');
+        const closeCartButton = document.getElementById('close-cart');
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartTotalAmount = document.getElementById('cart-total-amount');
+        
+        // カートに商品を追加
+        addToCartButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                // 商品情報を取得
+                const productItem = this.closest('.product-item');
+                const productName = productItem.querySelector('.product-name').textContent;
+                const productPrice = productItem.querySelector('.product-price').textContent;
+                const productImage = productItem.querySelector('.product-image img').src;
+                
+                // カートに追加
+                const existingItem = cartItems.find(item => item.name === productName);
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cartItems.push({
+                        name: productName,
+                        price: productPrice,
+                        image: productImage,
+                        quantity: 1
+                    });
+                }
+                
+                // カートを開く
+                updateCartDisplay();
+                shoppingCart.classList.add('open');
+                cartOverlay.classList.add('show');
+            });
+        });
+        
+        // カートを閉じる
+        closeCartButton.addEventListener('click', function() {
+            shoppingCart.classList.remove('open');
+            cartOverlay.classList.remove('show');
+        });
+        
+        cartOverlay.addEventListener('click', function() {
+            shoppingCart.classList.remove('open');
+            cartOverlay.classList.remove('show');
+        });
+        
+        // カートの表示を更新
+        function updateCartDisplay() {
+            if (cartItems.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="empty-cart-message">カートに商品がありません</p>';
+                cartTotalAmount.textContent = '0円';
+                return;
+            }
+            
+            let cartHTML = '';
+            let total = 0;
+            
+            cartItems.forEach(function(item, index) {
+                const priceText = item.price.replace(/[^0-9]/g, '');
+                const price = parseInt(priceText);
+                const itemTotal = price * item.quantity;
+                total += itemTotal;
+                
+                cartHTML += `
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <img src="${item.image}" alt="${item.name}">
+                        </div>
+                        <div class="cart-item-info">
+                            <h4>${item.name}</h4>
+                            <div class="cart-item-price">${item.price} × ${item.quantity}</div>
+                            <div class="cart-item-controls">
+                                <button class="cart-item-decrement" data-index="${index}">-</button>
+                                <span>${item.quantity}</span>
+                                <button class="cart-item-increment" data-index="${index}">+</button>
+                                <button class="cart-item-remove" data-index="${index}">削除</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            cartItemsContainer.innerHTML = cartHTML;
+            cartTotalAmount.textContent = total.toLocaleString() + '円';
+            
+            // 数量の増減と削除ボタンのイベントリスナーを追加
+            document.querySelectorAll('.cart-item-increment').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    cartItems[index].quantity += 1;
+                    updateCartDisplay();
+                });
+            });
+            
+            document.querySelectorAll('.cart-item-decrement').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    if (cartItems[index].quantity > 1) {
+                        cartItems[index].quantity -= 1;
+                    } else {
+                        cartItems.splice(index, 1);
+                    }
+                    updateCartDisplay();
+                });
+            });
+            
+            document.querySelectorAll('.cart-item-remove').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    cartItems.splice(index, 1);
+                    updateCartDisplay();
+                });
+            });
+        }
+        
+        // チェックアウトボタン
+        document.querySelector('.checkout-btn').addEventListener('click', function() {
+            if (cartItems.length === 0) {
+                alert('カートに商品がありません。');
+                return;
+            }
+            alert('注文手続きページに移動します。（デモ表示）');
+        });
+    </script>
+</body>
+</html>
